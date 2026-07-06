@@ -1,0 +1,69 @@
+name: Refresh dashboard data & deploy to Pages
+
+# Runs the preprocessor against the live Google Sheet, then publishes the static
+# dashboard (the public/ folder) to GitHub Pages.
+#
+# Triggers:
+#   - schedule: every Monday at 06:00 UTC (weekly refresh)
+#   - workflow_dispatch: a manual "Run workflow" button in the Actions tab
+#
+# Requirements (one-time setup, see README "Deploying with GitHub Pages"):
+#   - Repo Settings → Pages → Source = "GitHub Actions"
+#   - Repo Settings → Secrets and variables → Actions → new secret
+#       GCP_SERVICE_ACCOUNT_KEY = full contents of secrets/service-account.json
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # weekly, Monday 06:00 UTC
+  workflow_dispatch: {}
+
+# Permissions needed to publish to GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Avoid overlapping deploys.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write service-account key to a temp file
+        env:
+          SA_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+        run: printf '%s' "$SA_KEY" > "${{ runner.temp }}/sa.json"
+
+      - name: Refresh dashboard data from the live Google Sheet
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/sa.json
+        run: python scripts/preprocess.py
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload public/ as the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

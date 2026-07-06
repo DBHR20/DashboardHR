@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-06-26T12:33:15+02:00",
+  "files_count": 1,
+  "files_processed": [
+    {
+      "file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "region": "Dunkirk area",
+      "rows_read": 63,
+      "rows_valid_dated": 63,
+      "rows_excluded_invalid_date": 0,
+      "rows_with_missing_people_evicted": 28,
+      "rows_with_non_numeric_people_evicted": 0,
+      "total_police_operations": 15,
+      "total_living_sites_evicted": 62,
+      "total_people_evicted": 479,
+      "raw_legal_basis_counts": {
+        "Décision de justice - non-communiquée": 58,
+        "Pas de base légale": 1,
+        "Ne sais pas": 3,
+        "Unknown / not specified": 1
+      },
+      "warnings": []
+    }
+  ],
+  "rows_read": 63,
+  "valid_dated_rows": 63,
+  "excluded_invalid_or_missing_dates": 0,
+  "rows_with_missing_people_evicted": 28,
+  "rows_with_non_numeric_people_evicted": 0,
+  "total_police_operations": 15,
+  "total_living_sites_evicted": 62,
+  "total_people_evicted": 479,
+  "unique_legal_basis_categories": [
+    "Flagrante delicto",
+    "Court decision not communicated",
+    "Court decision communicated",
+    "Other"
+  ],
+  "legal_basis_raw_breakdown": {
+    "Décision de justice - non-communiquée": 58,
+    "Ne sais pas": 3,
+    "Pas de base légale": 1,
+    "Unknown / not specified": 1
+  },
+  "legal_basis_groups": [
+    {
+      "label": "Flagrante delicto",
+      "members": [
+        "Flagrance",
+        "Flagrant délit",
+        "Flagrante delicto"
+      ]
+    },
+    {
+      "label": "Court decision not communicated",
+      "members": [
+        "Décision de justice - non-communiquée",
+        "Décision de justice non-communiquée",
+        "Decision de justice - non-communiquee",
+        "Court decision not communicated"
+      ]
+    },
+    {
+      "label": "Court decision communicated",
+      "members": [
+        "Décision de justice - communiquée",
+        "Décision de justice communiquée",
+        "Decision de justice - communiquee",
+        "Court decision communicated"
+      ]
+    },
+    {
+      "label": "Other",
+      "members": []
+    }
+  ],
+  "regions": [
+    "Calais area",
+    "Dunkirk area"
+  ],
+  "date_range": {
+    "min": "2026-01-22",
+    "max": "2026-05-05"
+  },
+  "monthly_reports_months": [
+    "2026-04",
+    "2026-03",
+    "2026-02",
+    "2026-01",
+    "2025-12",
+    "2025-11",
+    "2025-10",
+    "2025-09",
+    "2025-08",
+    "2025-07",
+    "2025-06",
+    "2025-05",
+    "2025-04",
+    "2025-03",
+    "2025-02",
+    "2025-01",
+    "2024-12",
+    "2024-11",
+    "2024-10",
+    "2024-09",
+    "2024-08",
+    "2024-07",
+    "2024-06",
+    "2024-05",
+    "2024-04",
+    "2024-03",
+    "2024-02",
+    "2024-01"
+  ],
+  "warnings": []
+}

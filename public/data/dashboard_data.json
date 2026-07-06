@@ -1,0 +1,1051 @@
+{
+  "generated_at": "2026-06-26T12:33:15+02:00",
+  "config": {
+    "operation_marker_value": "Y",
+    "default_aggregation": "weekly"
+  },
+  "regions": [
+    "Calais area",
+    "Dunkirk area"
+  ],
+  "legal_basis_categories": [
+    "Flagrante delicto",
+    "Court decision not communicated",
+    "Court decision communicated",
+    "Other"
+  ],
+  "indicators": [
+    {
+      "key": "police_operations",
+      "label": "Police operations"
+    },
+    {
+      "key": "living_sites_evicted",
+      "label": "Living sites evicted"
+    },
+    {
+      "key": "people_evicted",
+      "label": "People evicted"
+    }
+  ],
+  "date_range": {
+    "min": "2026-01-22",
+    "max": "2026-05-05"
+  },
+  "totals": {
+    "police_operations": 15,
+    "living_sites_evicted": 62,
+    "people_evicted": 479,
+    "source_rows": 63
+  },
+  "monthly_reports_index_url": "https://humanrightsobservers.org/fr/monthly-observations/",
+  "monthly_reports": {
+    "2026-04": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2026/05/Monthly-report-Calais-area-April-English.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2026/05/NM-DK-042026-1.pdf"
+    },
+    "2026-03": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2026/04/Note-mensuelle-Calaisis-Mars-2026-english-version.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2026/04/Note-mensuelle-Dunkerquois-March-2026-English-version.pdf"
+    },
+    "2026-02": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2026/03/Monthly-report_Calais-area_feb_2026.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2026/03/Monthly-report_Dunkirk-area_feb_2026.pdf"
+    },
+    "2026-01": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2026/02/Montlhy_report_HRO_KL_01_2026_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2026/02/Montlhy_report_HRO_DK_01_2026_EN.pdf"
+    },
+    "2025-12": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2026/01/Monthly-report-Calais-12-2025.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2026/01/Monthly-Report-December-2025-Grande-Synthe.pdf"
+    },
+    "2025-11": {
+      "Calais area": "https://humanrightsobservers.org/fr/hro-montly-report-calais-area-nov-2025/",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/12/NM-DK-1125-ENG.pdf"
+    },
+    "2025-10": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/12/Monthly-report-Calais-october-2025-1.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/12/Note-mensuelle-GS-octobre-2025-FR.pdf"
+    },
+    "2025-09": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/11/Calais-September-1-1.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/11/Dunkirk-September-2025.pdf"
+    },
+    "2025-08": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/10/EN-Note-Mensuelle-Calais-Aout-2025-2.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/10/EN-NM-DK-aout-2025-2-1.pdf"
+    },
+    "2025-07": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/08/2025-07_Monthly_Report_Calaisis_EN-1.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/08/2025-07_Monthly_Report_Dunkerquois_EN-1.pdf"
+    },
+    "2025-06": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/07/2025_06_Monthly_Report_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/07/2025_06_Monthly_Report_Dunkerquois_EN.pdf"
+    },
+    "2025-05": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/06/2025-05_Monthly_Report_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/06/2025-05_Monthly_Report_Dunkerquois_EN.pdf"
+    },
+    "2025-04": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/05/2025_Avril_NM_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/05/2025_Avril_NM_Dunkerquois_EN.pdf"
+    },
+    "2025-03": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/04/2025_03_Monthly_Report_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/04/2025_03_monthly_report_Dunkerquois_EN.pdf"
+    },
+    "2025-02": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/03/2025-02-monthly_report_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/03/2025-02-monthly_report_Dunkerquois_EN.pdf"
+    },
+    "2025-01": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/03/2025-01-monthly_report_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/03/2025-01_monthly_report_Dunkerquois_EN.pdf"
+    },
+    "2024-12": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/01/2024-12_Monthly_report_Calais_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/01/2024-12_Monthly_report_Dunkirk_EN.pdf"
+    },
+    "2024-11": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2025/01/2024-11_Monthly_report_Calais_EN.pdf.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2025/01/2024-11_Monthly_report_Dunkirk_EN.pdf.pdf"
+    },
+    "2024-10": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/11/2024-10_Monthly_report_Calais_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/11/2024-10_Monthly_report_Dunkirk_EN.pdf"
+    },
+    "2024-09": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/11/2024-09_Monthly_report_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/11/2024-09_Monthly_report_Dunkirk_EN.pdf"
+    },
+    "2024-08": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/11/2024-08_Monthly_report_Calaisis_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/11/2024-08_Monthly_report_Dunkirk_EN.pdf"
+    },
+    "2024-07": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/08/2024-07_Monthly_report_Calais_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/08/2024-07_Monthly_report_DK_EN.pdf"
+    },
+    "2024-06": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/07/2024-06_Monthly_report_Calais_ENG.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/07/2024-06_Montlhy_report_Dunkirk_ENG.pdf"
+    },
+    "2024-05": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/07/2024-05_Monthly_report_Calais_EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/07/2024-05_Monthly_report_Dunkirk_EN.pdf"
+    },
+    "2024-04": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/06/2024-04-Monthly-Report-Calais-EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/06/2024-04-Monthly-Report-Dunkirk-EN.pdf"
+    },
+    "2024-03": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/04/03_Kl-March-2024-EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/04/03_Dk-March-2024-EN.pdf"
+    },
+    "2024-02": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/03/Monthly-bulletin-February-2024-Calais.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/03/monthly-bulletin-February-2024-Dunkirk.pdf"
+    },
+    "2024-01": {
+      "Calais area": "https://humanrightsobservers.org/wp-content/uploads/2024/02/Calais-January-2024-EN.pdf",
+      "Dunkirk area": "https://humanrightsobservers.org/wp-content/uploads/2024/02/Dunkirk-January-2024-EN.pdf"
+    }
+  },
+  "cleaned_records": [
+    {
+      "date": "2026-01-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 6,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 4
+    },
+    {
+      "date": "2026-01-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 10,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 5
+    },
+    {
+      "date": "2026-01-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 25,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 6
+    },
+    {
+      "date": "2026-01-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 26,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 7
+    },
+    {
+      "date": "2026-01-28",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 25,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 8
+    },
+    {
+      "date": "2026-01-28",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 10,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 9
+    },
+    {
+      "date": "2026-01-28",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 10
+    },
+    {
+      "date": "2026-01-28",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 11
+    },
+    {
+      "date": "2026-02-04",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 12
+    },
+    {
+      "date": "2026-02-04",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 10,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 13
+    },
+    {
+      "date": "2026-02-04",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 10,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 14
+    },
+    {
+      "date": "2026-02-04",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 40,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 15
+    },
+    {
+      "date": "2026-02-04",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 16
+    },
+    {
+      "date": "2026-02-04",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 5,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 17
+    },
+    {
+      "date": "2026-02-06",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 18,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 18
+    },
+    {
+      "date": "2026-02-18",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 35,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 19
+    },
+    {
+      "date": "2026-02-18",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 19,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 20
+    },
+    {
+      "date": "2026-02-18",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 4,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 21
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 20,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 22
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 23
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 8,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 24
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 25
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 26
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 35,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 27
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 28
+    },
+    {
+      "date": "2026-02-27",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 29
+    },
+    {
+      "date": "2026-03-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 14,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 30
+    },
+    {
+      "date": "2026-03-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 31
+    },
+    {
+      "date": "2026-03-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 6,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 32
+    },
+    {
+      "date": "2026-03-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 33
+    },
+    {
+      "date": "2026-03-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 3,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 34
+    },
+    {
+      "date": "2026-03-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 20,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 35
+    },
+    {
+      "date": "2026-03-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 36
+    },
+    {
+      "date": "2026-03-12",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 37
+    },
+    {
+      "date": "2026-03-12",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 3,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 38
+    },
+    {
+      "date": "2026-03-12",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 39
+    },
+    {
+      "date": "2026-03-12",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 40
+    },
+    {
+      "date": "2026-03-12",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 41
+    },
+    {
+      "date": "2026-03-12",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 7,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 42
+    },
+    {
+      "date": "2026-03-12",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 43
+    },
+    {
+      "date": "2026-03-26",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 2,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 44
+    },
+    {
+      "date": "2026-03-26",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 45
+    },
+    {
+      "date": "2026-03-26",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 46
+    },
+    {
+      "date": "2026-03-26",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 47
+    },
+    {
+      "date": "2026-04-02",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 14,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 48
+    },
+    {
+      "date": "2026-04-02",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 49
+    },
+    {
+      "date": "2026-04-02",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 29,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 50
+    },
+    {
+      "date": "2026-04-02",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 3,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 51
+    },
+    {
+      "date": "2026-04-03",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 52
+    },
+    {
+      "date": "2026-04-09",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 20,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 53
+    },
+    {
+      "date": "2026-04-09",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 17,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 54
+    },
+    {
+      "date": "2026-04-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 55
+    },
+    {
+      "date": "2026-04-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 56
+    },
+    {
+      "date": "2026-04-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 4,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 57
+    },
+    {
+      "date": "2026-04-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 58
+    },
+    {
+      "date": "2026-04-22",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 7,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 59
+    },
+    {
+      "date": "2026-04-29",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 60
+    },
+    {
+      "date": "2026-04-29",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 1,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 61
+    },
+    {
+      "date": "2026-04-29",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 2,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 62
+    },
+    {
+      "date": "2026-05-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 2,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 63
+    },
+    {
+      "date": "2026-05-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 64
+    },
+    {
+      "date": "2026-05-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 1,
+      "people_evicted": 19,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 65
+    },
+    {
+      "date": "2026-05-05",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 0,
+      "living_sites_evicted": 0,
+      "people_evicted": 0,
+      "source_rows": 1,
+      "source_file": "2026 Eviction_LOG_GS (1) [1tAyjugD…]",
+      "source_excel_row": 66
+    }
+  ],
+  "weekly": [
+    {
+      "period_start": "2026-01-19",
+      "period_end": "2026-01-25",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 4,
+      "people_evicted": 67,
+      "source_rows": 4
+    },
+    {
+      "period_start": "2026-01-26",
+      "period_end": "2026-02-01",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 4,
+      "people_evicted": 35,
+      "source_rows": 4
+    },
+    {
+      "period_start": "2026-02-02",
+      "period_end": "2026-02-08",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 6,
+      "people_evicted": 65,
+      "source_rows": 6
+    },
+    {
+      "period_start": "2026-02-02",
+      "period_end": "2026-02-08",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 18,
+      "source_rows": 1
+    },
+    {
+      "period_start": "2026-02-16",
+      "period_end": "2026-02-22",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 3,
+      "people_evicted": 58,
+      "source_rows": 3
+    },
+    {
+      "period_start": "2026-02-23",
+      "period_end": "2026-03-01",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 8,
+      "people_evicted": 63,
+      "source_rows": 8
+    },
+    {
+      "period_start": "2026-03-02",
+      "period_end": "2026-03-08",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 7,
+      "people_evicted": 43,
+      "source_rows": 7
+    },
+    {
+      "period_start": "2026-03-09",
+      "period_end": "2026-03-15",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 7,
+      "people_evicted": 10,
+      "source_rows": 7
+    },
+    {
+      "period_start": "2026-03-23",
+      "period_end": "2026-03-29",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 4,
+      "people_evicted": 2,
+      "source_rows": 4
+    },
+    {
+      "period_start": "2026-03-30",
+      "period_end": "2026-04-05",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 4,
+      "people_evicted": 46,
+      "source_rows": 4
+    },
+    {
+      "period_start": "2026-03-30",
+      "period_end": "2026-04-05",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1
+    },
+    {
+      "period_start": "2026-04-06",
+      "period_end": "2026-04-12",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 2,
+      "people_evicted": 37,
+      "source_rows": 2
+    },
+    {
+      "period_start": "2026-04-20",
+      "period_end": "2026-04-26",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 4,
+      "people_evicted": 11,
+      "source_rows": 4
+    },
+    {
+      "period_start": "2026-04-20",
+      "period_end": "2026-04-26",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1
+    },
+    {
+      "period_start": "2026-04-27",
+      "period_end": "2026-05-03",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 0,
+      "living_sites_evicted": 2,
+      "people_evicted": 3,
+      "source_rows": 2
+    },
+    {
+      "period_start": "2026-04-27",
+      "period_end": "2026-05-03",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 1,
+      "living_sites_evicted": 1,
+      "people_evicted": 0,
+      "source_rows": 1
+    },
+    {
+      "period_start": "2026-05-04",
+      "period_end": "2026-05-10",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Court decision not communicated",
+      "police_operations": 1,
+      "living_sites_evicted": 3,
+      "people_evicted": 21,
+      "source_rows": 3
+    },
+    {
+      "period_start": "2026-05-04",
+      "period_end": "2026-05-10",
+      "aggregation": "weekly",
+      "region": "Dunkirk area",
+      "legal_basis": "Other",
+      "police_operations": 0,
+      "living_sites_evicted": 0,
+      "people_evicted": 0,
+      "source_rows": 1
+    }
+  ]
+}

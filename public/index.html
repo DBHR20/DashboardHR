@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evictions Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <header class="dashboard__head">
+      <div class="dashboard__brand">
+        <p class="dashboard__eyebrow">Interactive Dashboard</p>
+        <h1 class="dashboard__title">Evictions Dashboard</h1>
+      </div>
+      <!-- Replace this paragraph with the project methodology. Placeholder only. -->
+      <p class="dashboard__lede" data-editable="disclaimer">
+        Placeholder text. Replace with project methodology.
+      </p>
+    </header>
+
+    <div class="dashboard__body">
+      <aside class="controls" aria-label="Filters">
+        <!--
+          Each .controls__section carries data-section + data-explanation.
+          The text in data-explanation appears in the Explanation panel below
+          whenever the user hovers, focuses, or changes anything in that
+          section. Edit the strings to replace the placeholder copy.
+        -->
+
+        <section class="controls__section"
+                 data-section="time-range"
+                 data-explanation="Placeholder text. Replace with explanation of the time range filter — e.g. what window is shown by default and how the slider affects totals.">
+          <h2 class="controls__heading">Time range</h2>
+          <div class="slider__ends" id="slider-readout">
+            <span class="slider__end slider__end--start" id="slider-start">–</span>
+            <span class="slider__end slider__end--finish" id="slider-end">–</span>
+          </div>
+          <div class="slider" id="date-slider" aria-label="Date range slider"></div>
+        </section>
+
+        <section class="controls__section"
+                 data-section="indicators"
+                 data-explanation="Placeholder text. Replace with explanation of indicators — police operations are counted from the 'Y' marker; living sites evicted from non-empty location cells; people evicted from the numeric column.">
+          <h2 class="controls__heading">Indicators</h2>
+          <div class="check-list" id="indicators">
+            <label class="check">
+              <input type="checkbox" value="police_operations" checked />
+              <span>Police operations</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" value="living_sites_evicted" checked />
+              <span>Living sites evicted</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" value="people_evicted" checked />
+              <span>People evicted</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="controls__section"
+                 data-section="aggregation"
+                 data-explanation="Placeholder text. Replace with explanation of aggregation — daily shows each recorded date; weekly groups by ISO week; monthly groups by calendar month.">
+          <h2 class="controls__heading">Aggregation</h2>
+          <div class="check-list" id="aggregation" role="radiogroup" aria-label="Aggregation interval">
+            <label class="check"><input type="radio" name="agg" value="daily"  /><span>Daily</span></label>
+            <label class="check"><input type="radio" name="agg" value="weekly" checked /><span>Weekly</span></label>
+            <label class="check"><input type="radio" name="agg" value="monthly" /><span>Monthly</span></label>
+          </div>
+        </section>
+
+        <section class="controls__section"
+                 data-section="legal-basis"
+                 data-explanation="Placeholder text. Replace with explanation of the legal basis filter — what each of the four categories means in practice.">
+          <h2 class="controls__heading">Legal basis</h2>
+          <div class="check-list check-list--scroll" id="legal-basis"></div>
+        </section>
+
+        <section class="controls__section"
+                 data-section="regions"
+                 data-explanation="Placeholder text. Replace with explanation of the region filter — Calais area covers the city of Calais; Dunkirk area covers Dunkirk and Grande-Synthe combined.">
+          <h2 class="controls__heading">Regions</h2>
+          <div class="check-list" id="regions"></div>
+        </section>
+
+        <section class="controls__section controls__section--explain"
+                 data-section="explanation"
+                 data-explanation="Placeholder text. This panel mirrors whichever filter you last touched.">
+          <h2 class="controls__heading">Explanation</h2>
+          <div class="explain-box" id="selection-explanation" aria-live="polite"
+               data-editable="default-explanation">
+            Hover or change a filter to see what it does.
+          </div>
+        </section>
+
+        <section class="controls__section controls__section--totals"
+                 data-section="totals"
+                 data-explanation="Placeholder text. Replace with explanation of the totals — values reflect every record matching the current filters and date range.">
+          <h2 class="controls__heading">Totals</h2>
+          <div class="totals">
+            <div class="total">
+              <div class="total__label">Police operations</div>
+              <div class="total__value" id="total-operations">–</div>
+            </div>
+            <div class="total">
+              <div class="total__label">Living sites evicted</div>
+              <div class="total__value" id="total-sites">–</div>
+            </div>
+            <div class="total">
+              <div class="total__label">People evicted</div>
+              <div class="total__value" id="total-people">–</div>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <main class="panel">
+        <div class="panel__top">
+          <div class="panel__heading">
+            <p class="panel__eyebrow">Time series</p>
+            <h2 class="panel__subtitle">Selected indicators</h2>
+          </div>
+          <div class="legend" id="legend" aria-label="Chart legend"></div>
+        </div>
+        <div class="chart" id="chart"></div>
+      </main>
+    </div>
+
+    <footer class="dashboard__foot">
+      <div class="foot__col">
+        <p class="foot__eyebrow">Methodology</p>
+        <p class="foot__body" data-editable="methodology">
+          Placeholder text. Replace with project methodology.
+        </p>
+      </div>
+      <div class="foot__col">
+        <p class="foot__eyebrow">Notes</p>
+        <p class="foot__body" data-editable="notes">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </footer>
+
+    <div class="error-banner" id="error-banner" hidden></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
