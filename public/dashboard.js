@@ -1,18 +1,4 @@
-/* -------------------------------------------------------------------------
- * Evictions & Police Operations dashboard - D3.js + vanilla JS.
- *
- * Loads `data/dashboard_data.json` (produced by scripts/preprocess.py) which
- * contains:
- *   - regions / legal_basis_categories (including configured zero-data extras)
- *   - indicators
- *   - cleaned_records: row-level cleaned rows (one row per Excel data row)
- *
- * All aggregation (daily / weekly / monthly) happens in the browser from
- * cleaned_records, so the user can switch grain without reloading.
- *
- * Selected regions are always aggregated into a single line per indicator -
- * there is no separate-by-region mode.
- * -------------------------------------------------------------------------*/
+
 
 const DATA_URL = "data/dashboard_data.json";
 
@@ -98,14 +84,7 @@ function init(payload) {
   });
 }
 
-// ---------------------------------------------------------------------------
-// Explanation panel
-//
-// Each .controls__section carries data-section + data-explanation. We bind to
-// mouseenter / focusin / change so the panel updates as soon as the user
-// touches a section. The active section also gets data-active="true" so CSS
-// can highlight it.
-// ---------------------------------------------------------------------------
+
 
 function bindExplanationPanel() {
   const sections = document.querySelectorAll(".controls__section[data-section]");
@@ -177,17 +156,7 @@ function buildLegalChecklist() {
   });
 }
 
-/**
- * Compact dual-handle range slider for the date filter. Drawn with D3
- * so it stays in sync with the rest of the chart styling. Square yellow
- * handles, yellow active range, muted track. Dragging updates the
- * readout AND the dashboard live (throttled to one redraw per animation
- * frame), so the chart/totals follow the handle continuously rather than
- * only on release.
- *
- * If the dataset has no usable date range, the slider draws an inert
- * placeholder track and the readout shows a dash.
- */
+
 function buildDateSlider(min, max) {
   const host = d3.select("#date-slider");
   host.selectAll("*").remove();
