@@ -1,29 +1,4 @@
-"""
-Preprocess eviction / police-operation logs into a single JSON file consumable
-by the D3 dashboard.
 
-DATA SOURCE: live Google Sheets, read through a read-only service account.
-(The older "read local .xlsx from data_raw/" path is kept as a fallback — see
-read_excel_file() and SOURCE below — but the default is Google Sheets.)
-
-Run:
-    python scripts/preprocess.py
-
-Inputs (default):
-    Each entry in CONFIG["google_sheets"] is one online spreadsheet mapped to a
-    region. Every sheet has a tab named LOG (headers on row 3, data from row 4)
-    and may optionally have a "Reports" tab listing monthly-report links.
-
-    Authentication uses secrets/service-account.json (NOT committed to git).
-
-Outputs:
-    data_processed/dashboard_data.json
-    data_processed/validation_report.json
-    public/data/dashboard_data.json   (copy used by the static frontend)
-
-The frontend aggregates daily/weekly/monthly itself from the row-level records
-in this file, so we only need to ship cleaned rows + metadata.
-"""
 
 from __future__ import annotations
 
@@ -38,63 +13,30 @@ from typing import Any
 import pandas as pd
 from openpyxl.utils import column_index_from_string
 
-# ---------------------------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------------------------
+
 
 CONFIG: dict[str, Any] = {
-    # Where to read data from: "google_sheets" (default) or "excel" (fallback,
-    # reads data_raw/*.xlsx exactly like the original script did).
     "source": "google_sheets",
-
-    # --- Google Sheets source -------------------------------------------------
-    # One entry per online spreadsheet. region is assigned to every row read
-    # from that spreadsheet's LOG tab (the sheet itself defines the region,
-    # since a single sheet holds a single region's data).
-    # Add another {"sheet_id": ..., "region": "Calais area"} line to bring a
-    # second region online — nothing else needs to change.
     "google_sheets": [
         {
             "sheet_id": "1tAyjugD8iWhAcOa5qHvpN4k3p-ISYDBoE2R7mhshR3Y",
             "region": "Dunkirk area",
         },
     ],
-    # Service-account key, relative to project root. Overridable via the
-    # GOOGLE_APPLICATION_CREDENTIALS env var (used by the GitHub Action, which
-    # writes the secret to a temp file and points this at it).
     "service_account_file": "secrets/service-account.json",
-    # Name of the optional per-sheet tab that lists monthly-report links.
-    # Expected columns (row 1 = headers, case-insensitive): month | region | url
-    #   month  -> "YYYY-MM"
-    #   region -> e.g. "Dunkirk area" (optional; defaults to the sheet's region)
-    #   url    -> the report link
     "reports_tab_name": "Reports",
 
     "sheet_name": "LOG",
-    # 1-based row indices, as seen in the spreadsheet itself.
     "header_row": 3,
     "data_start_row": 4,
-
-    # Column letters as they appear in the sheet. Edit if the source moves columns.
     "date_col": "S",
     "operation_marker_col": "T",
     "living_site_col": "W",
     "people_evicted_col": "AA",
     "legal_basis_col": "AH",
-
-    # A police operation is counted only when this exact value appears in the
-    # operation_marker column (case-insensitive, stripped).
     "operation_marker_value": "Y",
-
-    # Label used in place of empty / missing legal basis values BEFORE grouping.
     "unknown_legal_basis": "Unknown / not specified",
-
-    # Default aggregation surfaced to the frontend. The user can still switch
-    # between daily/weekly/monthly in the dashboard.
     "default_aggregation": "weekly",
-
-    # Filename substring -> canonical region name (EXCEL fallback only). Matched
-    # case-insensitively in order (first match wins).
     "region_mapping": {
         "Calais":        "Calais area",
         "Calaisis":      "Calais area",
@@ -106,18 +48,10 @@ CONFIG: dict[str, Any] = {
         "Grande_Synthe": "Dunkirk area",
     },
 
-    # Regions that should always appear in the region filter, even if the
-    # current sources contain no rows for them.
     "extra_regions": [
         "Calais area",
         "Dunkirk area",
     ],
-
-    # Every cleaned legal-basis value is matched against `members` (case-
-    # insensitive, accent-insensitive). The first matching group's label is
-    # written to cleaned_records. Values that match no group fall into
-    # `legal_basis_default_label`. The four group labels are the ONLY
-    # legal-basis categories the dashboard surfaces.
     "legal_basis_groups": [
         {
             "label": "Flagrante delicto",
@@ -148,13 +82,6 @@ CONFIG: dict[str, Any] = {
         {"label": "Other", "members": []},
     ],
     "legal_basis_default_label": "Other",
-
-    # Monthly report links — SEED values. Going forward, add new reports to the
-    # "Reports" tab in the Google Sheet (month | region | url); links read from
-    # the sheet are merged on top of this seed (sheet wins on conflicts), so
-    # editors never need to touch this file again. The seed is kept only so the
-    # existing links keep working until the Reports tab is populated.
-    # Key: "YYYY-MM". Value: {region label -> report URL}.
     "monthly_reports_index_url": "https://humanrightsobservers.org/fr/monthly-observations/",
     "monthly_reports": {
         # 2026
@@ -274,18 +201,12 @@ CONFIG: dict[str, Any] = {
         },
     },
 
-    # Folders, relative to the project root (this file's parent's parent).
     "data_raw_dir": "data_raw",
     "data_processed_dir": "data_processed",
     "frontend_data_dir": "public/data",
 }
 
 GOOGLE_SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
-
-
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
 
 
 def _project_root() -> Path:
