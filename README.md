@@ -1,4 +1,4 @@
-# Evictions & Police Operations dashboard
+#  dashboard
 
 Data refreshes **automatically once a week** via GitHub Actions.
 
