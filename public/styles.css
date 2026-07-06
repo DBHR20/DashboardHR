@@ -1,8 +1,4 @@
-/* -------------------------------------------------------------------------
-   Evictions & Police Operations dashboard
-   Embeddable WordPress block. Black sidebar + black header/footer / yellow
-   accents / off-white chart panel. Sized as a compact widget.
-   ------------------------------------------------------------------------- */
+
 
 :root {
   --black: #050505;
@@ -52,7 +48,7 @@ html, body {
   flex-direction: column;
 }
 
-/* Header (black strip with eyebrow + big title left, disclaimer beside) ---- */
+/* Header ---- */
 
 .dashboard__head {
   background: var(--black);
