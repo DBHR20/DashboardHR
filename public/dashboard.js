@@ -74,6 +74,7 @@ function init(payload) {
   bindAggregationRadios();
   bindTooltipDismiss();
   bindExplanationPanel();
+  bindInfoIcons();
 
   setAggregationFromState();
   update();
@@ -112,6 +113,26 @@ function bindExplanationPanel() {
   if (sidebar) {
     sidebar.addEventListener("mouseleave", () => show(null));
   }
+}
+
+function bindInfoIcons() {
+  const icons = document.querySelectorAll(".info-icon");
+  icons.forEach((icon) => {
+    const popover = icon.closest(".controls__heading")?.nextElementSibling;
+    if (!popover || !popover.classList.contains("info-popover")) return;
+    icon.addEventListener("click", () => {
+      const isOpen = !popover.hidden;
+      icons.forEach((other) => {
+        other.setAttribute("aria-expanded", "false");
+        const p = other.closest(".controls__heading")?.nextElementSibling;
+        if (p && p.classList.contains("info-popover")) p.hidden = true;
+      });
+      if (!isOpen) {
+        popover.hidden = false;
+        icon.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -525,7 +546,7 @@ function drawChart(maybeSeries) {
     .attr("class", "axis-label")
     .attr("text-anchor", "middle")
     .attr("transform", `translate(${-38},${innerH / 2}) rotate(-90)`)
-    .text("Value");
+    .text("Amount");
 
   g.append("text")
     .attr("class", "axis-label")
@@ -566,6 +587,33 @@ function drawChart(maybeSeries) {
     .attr("x", 0).attr("y", 0)
     .attr("width", innerW).attr("height", innerH)
     .attr("fill", "transparent");
+
+  // Permanent dot markers at each plotted point. Appended after the overlay
+  // so they sit on top of it and can receive their own mouseenter/mouseleave
+  // (otherwise the overlay would swallow the events first).
+  Object.values(series.byIndicator).forEach((s) => {
+    g.append("g")
+      .attr("class", "series-dots")
+      .selectAll("circle")
+      .data(s.points.filter((d) => Number.isFinite(d.value)))
+      .enter()
+      .append("circle")
+      .attr("class", "series-dot")
+      .attr("cx", (d) => x(d.date))
+      .attr("cy", (d) => y(d.value))
+      .attr("r", 3)
+      .attr("fill", s.color)
+      .on("mouseenter", function () {
+        d3.select(this).transition().duration(120).attr("r", 6);
+      })
+      .on("mouseleave", function () {
+        d3.select(this).transition().duration(120).attr("r", 3);
+      })
+      .on("click", (event, d) => {
+        event.stopPropagation();
+        pinAt(d.date);
+      });
+  });
 
   // Expose this draw's guide/dots for the global dismiss handlers.
   chartLayer = { hoverLine, hoverDots };

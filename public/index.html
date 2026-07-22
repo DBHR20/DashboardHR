@@ -5,22 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Evictions Dashboard</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700" rel="stylesheet">
 </head>
 <body>
   <div class="dashboard">
-    <header class="dashboard__head">
-      <div class="dashboard__brand">
-        <p class="dashboard__eyebrow">Interactive Dashboard</p>
-        <h1 class="dashboard__title">Evictions Dashboard</h1>
-      </div>
-      <p class="dashboard__lede" data-editable="disclaimer">
-        Placeholder text. Replace with project methodology.
-      </p>
-    </header>
 
     <div class="dashboard__body">
       <aside class="controls" aria-label="Filters">
-
+        <p class="panel__eyebrow">
+          Interactive Dashboard
+        </p>
+        <h3>
+          Evictions
+        </h3>
+        <p class="head-explanation">
+          Short explanation of Dashboard. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illo perferendis illum dolore placeat, inventore odit recusandae nihil accusamus odio est dolorum asperiores at, corrupti vero quaerat consequatur laborum. Laudantium.
+        </p>
         <section class="controls__section"
                  data-section="time-range"
                  data-explanation="Placeholder text. Replace with explanation of the time range filter — e.g. what window is shown by default and how the slider affects totals.">
@@ -35,7 +37,13 @@
         <section class="controls__section"
                  data-section="indicators"
                  data-explanation="Placeholder text. Replace with explanation of indicators — police operations are counted from the 'Y' marker; living sites evicted from non-empty location cells; people evicted from the numeric column.">
-          <h2 class="controls__heading">Indicators</h2>
+          <h2 class="controls__heading">
+            Indicators
+            <button type="button" class="info-icon" aria-label="About indicators" aria-expanded="false">i</button>
+          </h2>
+          <p class="info-popover" hidden>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
           <div class="check-list" id="indicators">
             <label class="check">
               <input type="checkbox" value="police_operations" checked />
@@ -55,7 +63,13 @@
         <section class="controls__section"
                  data-section="aggregation"
                  data-explanation="Placeholder text. Replace with explanation of aggregation — daily shows each recorded date; weekly groups by ISO week; monthly groups by calendar month.">
-          <h2 class="controls__heading">Aggregation</h2>
+          <h2 class="controls__heading">
+            Aggregation
+            <button type="button" class="info-icon" aria-label="About aggregation" aria-expanded="false">i</button>
+          </h2>
+          <p class="info-popover" hidden>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
           <div class="check-list" id="aggregation" role="radiogroup" aria-label="Aggregation interval">
             <label class="check"><input type="radio" name="agg" value="daily"  /><span>Daily</span></label>
             <label class="check"><input type="radio" name="agg" value="weekly" checked /><span>Weekly</span></label>
@@ -66,18 +80,30 @@
         <section class="controls__section"
                  data-section="legal-basis"
                  data-explanation="Placeholder text. Replace with explanation of the legal basis filter — what each of the four categories means in practice.">
-          <h2 class="controls__heading">Legal basis</h2>
+          <h2 class="controls__heading">
+            Legal basis
+            <button type="button" class="info-icon" aria-label="About legal basis" aria-expanded="false">i</button>
+          </h2>
+          <p class="info-popover" hidden>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
           <div class="check-list check-list--scroll" id="legal-basis"></div>
         </section>
 
         <section class="controls__section"
                  data-section="regions"
                  data-explanation="Placeholder text. Replace with explanation of the region filter — Calais area covers the city of Calais; Dunkirk area covers Dunkirk and Grande-Synthe combined.">
-          <h2 class="controls__heading">Regions</h2>
+          <h2 class="controls__heading">
+            Regions
+            <button type="button" class="info-icon" aria-label="About regions" aria-expanded="false">i</button>
+          </h2>
+          <p class="info-popover" hidden>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
           <div class="check-list" id="regions"></div>
         </section>
 
-        <section class="controls__section controls__section--explain"
+        <!-- <section class="controls__section controls__section--explain"
                  data-section="explanation"
                  data-explanation="Placeholder text. This panel mirrors whichever filter you last touched.">
           <h2 class="controls__heading">Explanation</h2>
@@ -85,7 +111,7 @@
                data-editable="default-explanation">
             Hover or change a filter to see what it does.
           </div>
-        </section>
+        </section> -->
 
         <section class="controls__section controls__section--totals"
                  data-section="totals"
