@@ -222,13 +222,17 @@ function buildDateSlider(min, max) {
     .attr("class", "slider-handle")
     .attr("width", handleSize)
     .attr("height", handleSize)
-    .attr("y", trackY - handleSize / 2);
+    .attr("y", trackY - handleSize / 2)
+    .attr("rx", handleSize / 2)
+    .attr("ry", handleSize / 2);
 
   const endHandle = svg.append("rect")
     .attr("class", "slider-handle")
     .attr("width", handleSize)
     .attr("height", handleSize)
-    .attr("y", trackY - handleSize / 2);
+    .attr("y", trackY - handleSize / 2)
+    .attr("rx", handleSize / 2)
+    .attr("ry", handleSize / 2);
 
   // Clamp current state into the slider domain in case the data shrank.
   if (state.filters.dateStart < min) state.filters.dateStart = min;

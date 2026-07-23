@@ -14,6 +14,7 @@
   <div class="dashboard">
 
     <div class="dashboard__body">
+      <div class="sidebar-col">
       <aside class="controls" aria-label="Filters">
         <p class="panel__eyebrow">
           Interactive Dashboard
@@ -113,8 +114,9 @@
             Hover or change a filter to see what it does.
           </div>
         </section> -->
+      </aside>
 
-        <section class="controls__section controls__section--totals"
+      <section class="controls__section controls__section--totals"
                  data-section="totals"
                  data-explanation="Placeholder text. Replace with explanation of the totals — values reflect every record matching the current filters and date range.">
           <h2 class="controls__heading">Totals</h2>
@@ -133,13 +135,13 @@
             </div>
           </div>
         </section>
-      </aside>
+      </div>
 
       <main class="panel">
         <div class="panel__top">
           <div class="panel__heading">
-            <p class="panel__eyebrow">Time series</p>
-            <h2 class="panel__subtitle">Selected indicators</h2>
+            <p class="panel__eyebrow">Selected Indicators</p>
+            <!-- <h2 class="panel__subtitle">Selected indicators</h2> -->
           </div>
           <div class="legend" id="legend" aria-label="Chart legend"></div>
         </div>
