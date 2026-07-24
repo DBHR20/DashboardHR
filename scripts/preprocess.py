@@ -27,8 +27,8 @@ CONFIG: dict[str, Any] = {
     "reports_tab_name": "Reports",
 
     "sheet_name": "LOG",
-    "header_row": 3,
-    "data_start_row": 4,
+    "header_row": 1,
+    "data_start_row": 2,
     "date_col": "B",
     "operation_marker_col": "C",
     "living_site_col": "D",

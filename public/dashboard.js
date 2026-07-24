@@ -542,28 +542,23 @@ function drawChart(maybeSeries) {
     .attr("transform", `translate(0,${innerH})`)
     .call(xAxis);
 
-  // Year row: one label per calendar year visible in the domain, centred on
-  // whatever portion of that year actually falls within the plotted range.
-  const yearBands = [];
-  let yearCursor = new Date(xDomain[0].getFullYear(), 0, 1);
-  while (yearCursor <= xDomain[1]) {
-    const yearEnd = new Date(yearCursor.getFullYear() + 1, 0, 1);
-    const bandStart = yearCursor < xDomain[0] ? xDomain[0] : yearCursor;
-    const bandEnd = yearEnd > xDomain[1] ? xDomain[1] : yearEnd;
-    yearBands.push({
-      year: yearCursor.getFullYear(),
-      mid: new Date((+bandStart + +bandEnd) / 2),
-    });
-    yearCursor = yearEnd;
+  // Year row: a label at each January 1st that falls within the plotted
+  // range, marking where the new year begins on the axis.
+  const yearLabels = [];
+  for (let yr = xDomain[0].getFullYear(); yr <= xDomain[1].getFullYear(); yr++) {
+    const jan1 = new Date(yr, 0, 1);
+    if (jan1 >= xDomain[0] && jan1 <= xDomain[1]) {
+      yearLabels.push({ year: yr, date: jan1 });
+    }
   }
 
   g.append("g")
     .attr("class", "axis axis--year")
     .selectAll("text")
-    .data(yearBands)
+    .data(yearLabels)
     .enter()
     .append("text")
-    .attr("x", (d) => x(d.mid))
+    .attr("x", (d) => x(d.date))
     .attr("y", innerH + 34)
     .attr("text-anchor", "middle")
     .text((d) => d.year);
