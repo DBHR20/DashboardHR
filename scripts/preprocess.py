@@ -29,11 +29,12 @@ CONFIG: dict[str, Any] = {
     "sheet_name": "LOG",
     "header_row": 3,
     "data_start_row": 4,
-    "date_col": "S",
-    "operation_marker_col": "T",
-    "living_site_col": "W",
-    "people_evicted_col": "AA",
-    "legal_basis_col": "AH",
+    "date_col": "B",
+    "operation_marker_col": "C",
+    "living_site_col": "D",
+    "people_evicted_col": "E",
+    "legal_basis_col": "F",
+    "region_col": "A",
     "operation_marker_value": "Y",
     "unknown_legal_basis": "Unknown / not specified",
     "default_aggregation": "weekly",
@@ -376,6 +377,7 @@ def process_dataframe(
     Google Sheets and Excel readers behave identically.
     """
     cols = {
+        "region": _col_index(cfg["region_col"]),
         "date": _col_index(cfg["date_col"]),
         "marker": _col_index(cfg["operation_marker_col"]),
         "living": _col_index(cfg["living_site_col"]),
@@ -393,8 +395,10 @@ def process_dataframe(
 
     rows: list[dict[str, Any]] = []
     marker_seen = False
+    unmapped_region_seen = False
 
     for i, raw in df.iterrows():
+        region_value = raw.iloc[cols["region"]]
         date_value = raw.iloc[cols["date"]]
         marker_value = raw.iloc[cols["marker"]]
         living_value = raw.iloc[cols["living"]]
@@ -427,9 +431,17 @@ def process_dataframe(
             report["raw_legal_basis_counts"].get(raw_legal, 0) + 1
         )
 
+        row_region = (
+            _infer_region(str(region_value), cfg["region_mapping"])
+            if _is_non_empty(region_value) else None
+        )
+        if row_region is None:
+            row_region = region
+            unmapped_region_seen = True
+
         rows.append({
             "date": parsed_date.isoformat(),
-            "region": region,
+            "region": row_region,
             "legal_basis": mapped_legal,
             "police_operations": 1 if is_operation else 0,
             "living_sites_evicted": 1 if is_living else 0,
@@ -448,6 +460,13 @@ def process_dataframe(
         report["warnings"].append(
             f"No row in '{source_label}' contained '{cfg['operation_marker_value']}' "
             f"in column {cfg['operation_marker_col']}. Police operations will be 0."
+        )
+
+    if unmapped_region_seen:
+        report["warnings"].append(
+            f"Some rows in '{source_label}' had a blank or unrecognised region in column "
+            f"{cfg['region_col']}; those rows were labelled '{region}' (the source's default). "
+            "Edit CONFIG['region_mapping'] if a new spelling needs to be added."
         )
 
     return rows
