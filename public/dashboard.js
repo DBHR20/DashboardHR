@@ -491,8 +491,9 @@ function drawChart(maybeSeries) {
 
   const width = container.clientWidth;
   const height = container.clientHeight || 400;
-  // Bottom + left have extra room for the "Period" / "Value" axis labels.
-  const margin = { top: 14, right: 18, bottom: 44, left: 54 };
+  // Bottom + left have extra room for the year row and the "Period" / "Value"
+  // axis labels.
+  const margin = { top: 14, right: 18, bottom: 58, left: 54 };
   const innerW = Math.max(20, width - margin.left - margin.right);
   const innerH = Math.max(20, height - margin.top - margin.bottom);
 
@@ -541,6 +542,32 @@ function drawChart(maybeSeries) {
     .attr("transform", `translate(0,${innerH})`)
     .call(xAxis);
 
+  // Year row: one label per calendar year visible in the domain, centred on
+  // whatever portion of that year actually falls within the plotted range.
+  const yearBands = [];
+  let yearCursor = new Date(xDomain[0].getFullYear(), 0, 1);
+  while (yearCursor <= xDomain[1]) {
+    const yearEnd = new Date(yearCursor.getFullYear() + 1, 0, 1);
+    const bandStart = yearCursor < xDomain[0] ? xDomain[0] : yearCursor;
+    const bandEnd = yearEnd > xDomain[1] ? xDomain[1] : yearEnd;
+    yearBands.push({
+      year: yearCursor.getFullYear(),
+      mid: new Date((+bandStart + +bandEnd) / 2),
+    });
+    yearCursor = yearEnd;
+  }
+
+  g.append("g")
+    .attr("class", "axis axis--year")
+    .selectAll("text")
+    .data(yearBands)
+    .enter()
+    .append("text")
+    .attr("x", (d) => x(d.mid))
+    .attr("y", innerH + 34)
+    .attr("text-anchor", "middle")
+    .text((d) => d.year);
+
   g.append("g")
     .attr("class", "axis axis--y")
     .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format("d")));
@@ -556,7 +583,7 @@ function drawChart(maybeSeries) {
     .attr("class", "axis-label")
     .attr("text-anchor", "middle")
     .attr("x", innerW / 2)
-    .attr("y", innerH + 36)
+    .attr("y", innerH + 52)
     .text("Period");
 
   // Lines
