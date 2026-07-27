@@ -30,8 +30,8 @@
                  data-explanation="Placeholder text. Replace with explanation of the time range filter — e.g. what window is shown by default and how the slider affects totals.">
           <h2 class="controls__heading">Time range</h2>
           <div class="slider__ends" id="slider-readout">
-            <span class="slider__end slider__end--start" id="slider-start">–</span>
-            <span class="slider__end slider__end--finish" id="slider-end">–</span>
+            <input type="date" class="slider__end slider__end--start" id="slider-start" aria-label="Range start date" />
+            <input type="date" class="slider__end slider__end--finish" id="slider-end" aria-label="Range end date" />
           </div>
           <div class="slider" id="date-slider" aria-label="Date range slider"></div>
         </section>

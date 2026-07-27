@@ -182,12 +182,22 @@ function buildDateSlider(min, max) {
   const host = d3.select("#date-slider");
   host.selectAll("*").remove();
 
-  const startLabel = document.getElementById("slider-start");
-  const endLabel = document.getElementById("slider-end");
+  const startInput = document.getElementById("slider-start");
+  const endInput = document.getElementById("slider-end");
   if (!min || !max || min >= max) {
-    if (startLabel) startLabel.textContent = "–";
-    if (endLabel) endLabel.textContent = "–";
+    if (startInput) { startInput.value = ""; startInput.disabled = true; }
+    if (endInput) { endInput.value = ""; endInput.disabled = true; }
     return;
+  }
+  if (startInput) {
+    startInput.disabled = false;
+    startInput.min = isoDate(min);
+    startInput.max = isoDate(max);
+  }
+  if (endInput) {
+    endInput.disabled = false;
+    endInput.min = isoDate(min);
+    endInput.max = isoDate(max);
   }
 
   const width = host.node().getBoundingClientRect().width || 200;
@@ -250,8 +260,8 @@ function buildDateSlider(min, max) {
     active
       .attr("x", Math.min(x1, x2))
       .attr("width", Math.max(0, Math.abs(x2 - x1)));
-    if (startLabel) startLabel.textContent = formatSliderDate(state.filters.dateStart);
-    if (endLabel) endLabel.textContent = formatSliderDate(state.filters.dateEnd);
+    if (startInput) startInput.value = isoDate(state.filters.dateStart);
+    if (endInput) endInput.value = isoDate(state.filters.dateEnd);
   }
   paint();
 
@@ -286,10 +296,22 @@ function buildDateSlider(min, max) {
 
   startHandle.call(makeDrag("start"));
   endHandle.call(makeDrag("end"));
-}
 
-function formatSliderDate(d) {
-  return d.toLocaleDateString(undefined, { day: "2-digit", month: "short", year: "numeric" });
+  function onTypedDate(which) {
+    return (event) => {
+      const d = parseISO(event.target.value);
+      if (!d) return;
+      if (which === "start") {
+        state.filters.dateStart = d < min ? min : (d > state.filters.dateEnd ? state.filters.dateEnd : d);
+      } else {
+        state.filters.dateEnd = d > max ? max : (d < state.filters.dateStart ? state.filters.dateStart : d);
+      }
+      paint();
+      update();
+    };
+  }
+  if (startInput) startInput.addEventListener("change", onTypedDate("start"));
+  if (endInput) endInput.addEventListener("change", onTypedDate("end"));
 }
 
 function bindIndicatorChecks() {
