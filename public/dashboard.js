@@ -67,10 +67,10 @@ function init(payload) {
   state.filters.dateStart = min;
   state.filters.dateEnd = max;
 
-  buildRegionChecks();
-  buildLegalChecklist();
   buildDateSlider(min, max);
   bindIndicatorChecks();
+  bindLegalChecks();
+  bindRegionChecks();
   bindAggregationRadios();
   bindTooltipDismiss();
   bindExplanationPanel();
@@ -118,13 +118,13 @@ function bindExplanationPanel() {
 function bindInfoIcons() {
   const icons = document.querySelectorAll(".info-icon");
   icons.forEach((icon) => {
-    const popover = icon.closest(".controls__heading")?.nextElementSibling;
+    const popover = icon.closest(".check")?.nextElementSibling;
     if (!popover || !popover.classList.contains("info-popover")) return;
     icon.addEventListener("click", () => {
       const isOpen = !popover.hidden;
       icons.forEach((other) => {
         other.setAttribute("aria-expanded", "false");
-        const p = other.closest(".controls__heading")?.nextElementSibling;
+        const p = other.closest(".check")?.nextElementSibling;
         if (p && p.classList.contains("info-popover")) p.hidden = true;
       });
       if (!isOpen) {
@@ -139,41 +139,23 @@ function bindInfoIcons() {
 // Filter widgets
 // ---------------------------------------------------------------------------
 
-function buildRegionChecks() {
-  const host = document.getElementById("regions");
-  host.innerHTML = "";
-  state.regions.forEach((region) => {
-    const label = document.createElement("label");
-    label.className = "check";
-    label.innerHTML = `
-      <input type="checkbox" value="${escapeAttr(region)}" checked />
-      <span>${escapeHtml(region)}</span>
-    `;
-    label.querySelector("input").addEventListener("change", (e) => {
-      if (e.target.checked) state.filters.regions.add(region);
-      else state.filters.regions.delete(region);
+function bindRegionChecks() {
+  document.querySelectorAll("#regions input[type=checkbox]").forEach((cb) => {
+    cb.addEventListener("change", () => {
+      if (cb.checked) state.filters.regions.add(cb.value);
+      else state.filters.regions.delete(cb.value);
       update();
     });
-    host.appendChild(label);
   });
 }
 
-function buildLegalChecklist() {
-  const host = document.getElementById("legal-basis");
-  host.innerHTML = "";
-  state.legalCategories.forEach((cat) => {
-    const label = document.createElement("label");
-    label.className = "check";
-    label.innerHTML = `
-      <input type="checkbox" value="${escapeAttr(cat)}" checked />
-      <span>${escapeHtml(cat)}</span>
-    `;
-    label.querySelector("input").addEventListener("change", (e) => {
-      if (e.target.checked) state.filters.legal.add(cat);
-      else state.filters.legal.delete(cat);
+function bindLegalChecks() {
+  document.querySelectorAll("#legal-basis input[type=checkbox]").forEach((cb) => {
+    cb.addEventListener("change", () => {
+      if (cb.checked) state.filters.legal.add(cb.value);
+      else state.filters.legal.delete(cb.value);
       update();
     });
-    host.appendChild(label);
   });
 }
 
@@ -989,4 +971,15 @@ function escapeHtml(s) {
 function escapeAttr(s) { return escapeHtml(s); }
 function getCssVar(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || "";
+}
+
+const popUpHeader = document.getElementById("popUp-header");
+const popUpText = document.getElementById("how-to-popUp-text");
+const popUpArrow = document.querySelector("#how-to-popUp-button .arrow");
+
+popUpHeader.onclick = function() {toggle()};
+
+function toggle(){
+  popUpText.classList.toggle("hide");
+  popUpArrow.classList.toggle("open");
 }

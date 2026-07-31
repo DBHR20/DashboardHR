@@ -23,7 +23,7 @@
           Evictions
         </h3>
         <p class="head-explanation">
-          Short explanation of Dashboard. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illo perferendis illum dolore placeat, inventore odit recusandae nihil accusamus odio est dolorum asperiores at, corrupti vero quaerat consequatur laborum. Laudantium.
+          Since 2017, HRO’s mission has been to observe, document and expose the daily state violence perpetrated against people on the move at the French-British border. This database highlights one of the key aspects of this repressive policy: the systematic and repeated evictions from informal living sites in the Calais and Dunkirk area. Even though this policy started in 2017 and HRO started monitoring evictions the same here, here are presented the data from 2022 onwards because of a data loss for the years prior. See the annual and monthly reports to access the data for the years prior to 2022.
         </p>
         <section class="controls__section"
                  data-section="time-range"
@@ -41,24 +41,33 @@
                  data-explanation="Placeholder text. Replace with explanation of indicators — police operations are counted from the 'Y' marker; living sites evicted from non-empty location cells; people evicted from the numeric column.">
           <h2 class="controls__heading">
             Indicators
-            <button type="button" class="info-icon" aria-label="About indicators" aria-expanded="false">i</button>
           </h2>
-          <p class="info-popover" hidden>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
           <div class="check-list" id="indicators">
             <label class="check">
               <input type="checkbox" value="police_operations" checked />
-              <span>Police operations</span>
+              <span>Police operations 
+                <button type="button" class="info-icon" aria-label="About indicators" aria-expanded="false">i</button>
+              </span>
             </label>
+            <p class="info-popover" hidden>
+              When a single convoy evicts several living sites, HRO will count it as one "police operation" or ‘eviction operation.’ This is our most reliable dataset.
+            </p>
             <label class="check">
               <input type="checkbox" value="living_sites_evicted" checked />
-              <span>Living sites evicted</span>
+              <span>Living sites evicted <button type="button" class="info-icon" aria-label="About indicators" aria-expanded="false">i</button></span>
             </label>
+            <p class="info-popover" hidden>
+              HRO defines a separate living site as an area deemed unique by its inhabitants, by the authorities during eviction operations, requiring a specific police intervention or a separate phase of the operation. This dataset is slightly less reliable and comprehensive than the ‘police operation’ indicator.
+            </p>
             <label class="check">
               <input type="checkbox" value="people_evicted" checked />
-              <span>People evicted</span>
+              <span>People evicted
+                <button type="button" class="info-icon" aria-label="About indicators" aria-expanded="false">i</button>
+              </span>
             </label>
+            <p class="info-popover" hidden>
+              These figures should be regarded as an absolute minimum.  They include only those present and observed by our team at the time of the eviction. However, due to obstacles to observation and the difficulty, at times, of counting large numbers of people on the move, HRO is almost never able to determine the exact number of people evicted.  Furthermore, many people may be absent (due to accessing services provided by charities and community groups, attempting to cross the border, or leaving early to escape police harassment), whilst still having their personal belongings seized and their living sites destroyed.
+            </p>
           </div>
         </section>
 
@@ -67,11 +76,7 @@
                  data-explanation="Placeholder text. Replace with explanation of aggregation — daily shows each recorded date; weekly groups by ISO week; monthly groups by calendar month.">
           <h2 class="controls__heading">
             Aggregation
-            <button type="button" class="info-icon" aria-label="About aggregation" aria-expanded="false">i</button>
           </h2>
-          <p class="info-popover" hidden>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
           <div class="check-list" id="aggregation" role="radiogroup" aria-label="Aggregation interval">
             <label class="check"><input type="radio" name="agg" value="daily"  /><span>Daily</span></label>
             <label class="check"><input type="radio" name="agg" value="weekly" checked /><span>Weekly</span></label>
@@ -81,15 +86,48 @@
 
         <section class="controls__section"
                  data-section="legal-basis"
-                 data-explanation="Placeholder text. Replace with explanation of the legal basis filter — what each of the four categories means in practice.">
+                 data-explanation="Legal basis is the justification police cited for the eviction. Hover the &quot;i&quot; next to each category below for details.">
           <h2 class="controls__heading">
             Legal basis
-            <button type="button" class="info-icon" aria-label="About legal basis" aria-expanded="false">i</button>
           </h2>
-          <p class="info-popover" hidden>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div class="check-list check-list--scroll" id="legal-basis"></div>
+          <div class="check-list check-list--scroll" id="legal-basis">
+            <label class="check">
+              <input type="checkbox" value="Flagrante delicto" checked />
+              <span>Flagrante delicto
+                <button type="button" class="info-icon" aria-label="About legal basis" aria-expanded="false">i</button>
+              </span>
+            </label>
+            <p class="info-popover" hidden>
+              Eviction carried out under &ldquo;flagrance&rdquo; (flagrant d&eacute;lit): police intervene immediately, without a prior court order, on the grounds that they are catching an ongoing offence in the act.
+            </p>
+            <label class="check">
+              <input type="checkbox" value="Court decision communicated" checked />
+              <span>Court decision communicated
+                <button type="button" class="info-icon" aria-label="About legal basis" aria-expanded="false">i</button>
+              </span>
+            </label>
+            <p class="info-popover" hidden>
+              Eviction carried out under a court-ordered expulsion ruling that was formally notified to the site's occupants before police arrived.
+            </p>
+            <label class="check">
+              <input type="checkbox" value="Court decision not communicated" checked />
+              <span>Court decision not communicated
+                <button type="button" class="info-icon" aria-label="About legal basis" aria-expanded="false">i</button>
+              </span>
+            </label>
+            <p class="info-popover" hidden>
+              Eviction carried out under a court-ordered expulsion ruling that was not formally notified to the site's occupants beforehand &mdash; people learn of it only when police arrive.
+            </p>
+            <label class="check">
+              <input type="checkbox" value="Other" checked />
+              <span>Other
+                <button type="button" class="info-icon" aria-label="About legal basis" aria-expanded="false">i</button>
+              </span>
+            </label>
+            <p class="info-popover" hidden>
+              Evictions whose legal basis doesn't match the categories above, is unclear, or wasn't recorded.
+            </p>
+          </div>
         </section>
 
         <section class="controls__section"
@@ -97,23 +135,29 @@
                  data-explanation="Placeholder text. Replace with explanation of the region filter — Calais area covers the city of Calais; Dunkirk area covers Dunkirk and Grande-Synthe combined.">
           <h2 class="controls__heading">
             Regions
-            <button type="button" class="info-icon" aria-label="About regions" aria-expanded="false">i</button>
           </h2>
-          <p class="info-popover" hidden>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div class="check-list" id="regions"></div>
+          <div class="check-list" id="regions">
+            <label class="check">
+              <input type="checkbox" value="Calais area" checked />
+              <span>Calais area
+                <button type="button" class="info-icon" aria-label="About regions" aria-expanded="false">i</button>
+              </span>
+            </label>
+            <p class="info-popover" hidden>
+              HRO has operated in the Calais area since 2017.
+            </p>
+            <label class="check">
+              <input type="checkbox" value="Dunkirk area" checked />
+              <span>Dunkirk area
+                <button type="button" class="info-icon" aria-label="About regions" aria-expanded="false">i</button>
+              </span>
+            </label>
+            <p class="info-popover" hidden>
+              HRO has operated in the Dunkirk area since 2018.
+            </p>
+          </div>
         </section>
 
-        <!-- <section class="controls__section controls__section--explain"
-                 data-section="explanation"
-                 data-explanation="Placeholder text. This panel mirrors whichever filter you last touched.">
-          <h2 class="controls__heading">Explanation</h2>
-          <div class="explain-box" id="selection-explanation" aria-live="polite"
-               data-editable="default-explanation">
-            Hover or change a filter to see what it does.
-          </div>
-        </section> -->
       </aside>
 
       <section class="controls__section controls__section--totals"
@@ -149,23 +193,22 @@
       </main>
     </div>
 
-    <footer class="dashboard__foot">
-      <div class="foot__col">
-        <p class="foot__eyebrow">Methodology</p>
-        <p class="foot__body" data-editable="methodology">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
-      <div class="foot__col">
-        <p class="foot__eyebrow">Notes</p>
-        <p class="foot__body" data-editable="notes">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
-    </footer>
-
     <div class="error-banner" id="error-banner" hidden></div>
   </div>
+
+    <div class="how-to-popUp">
+        <div id="popUp-header" class="popUp-header">
+          <h2 class="controls__heading">How it works</h2>
+          <button id="how-to-popUp-button"><i class="arrow down"></i></button>
+        </div>
+        <div id="how-to-popUp-text" class="how-to-popUp-text">
+          1) Select a time range<br>
+          2) Choose your indicators and criterias (for each click on the circled i to get more information on the data)<br>
+          3) A graph will appear to visualise the selected data<br>
+          4) Click on each point of the graph to get a summary of the data for this point and the direct link to the relevant monthly report<br>
+          <br>
+        </div>
+      </div>
 
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="dashboard.js"></script>

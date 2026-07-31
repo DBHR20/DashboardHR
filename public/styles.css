@@ -127,7 +127,8 @@ html, body {
   .dashboard__head { padding: 18px 18px; }
   .dashboard__title { font-size: 21px; }
   .dashboard__lede { flex-basis: 100%; }
-  .controls { padding: 6px 16px 14px; }
+  .controls { padding: 6px 16px 14px;}
+  .sidebar-col{margin-right: 10px}
   .panel { padding: 16px 14px; }
   .dashboard__foot { padding: 16px 18px; }
 }
@@ -184,13 +185,13 @@ h3{
 .info-icon {
   appearance: none;
   -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 100%;
   border: 1px solid var(--on-dark-mute);
   background: transparent;
   color: var(--on-dark-mute);
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 700;
   font-family: Georgia, "Times New Roman", sans-serif;
   text-transform: none;
@@ -281,7 +282,6 @@ h3{
   gap: 8px;
 }
 .check-list--scroll {
-  max-height: 150px;
   overflow-y: auto;
   padding-right: 2px;
 }
@@ -676,3 +676,63 @@ h3{
   border-radius: var(--radius);
   font-size: 12px;
 }
+
+.how-to-popUp{
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 300px;
+  border-radius: 10px;
+  height: auto;
+  background: rgb(242, 183, 5,0.9);
+  color: rgb(0, 0, 0);
+}
+
+.how-to-popUp .controls__heading{
+  padding-top: 10px;
+}
+
+#how-to-popUp-button{
+  border: none;
+  background: none;
+}
+
+.popUp-header{
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.how-to-popUp-text{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+ .arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: transform 0.2s ease;
+}
+
+.down {
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+}
+
+.down.open {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
