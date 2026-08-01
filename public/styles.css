@@ -523,6 +523,7 @@ h3{
     padding-top: 16px;
     margin-top: 16px;
   }
+  .how-to-popUp{display: none;}
 }
 .foot__col { min-width: 0; padding-right: 32px; }
 .foot__col + .foot__col {
@@ -689,6 +690,10 @@ h3{
   color: rgb(0, 0, 0);
 }
 
+@media (max-width: 880px) {
+  .how-to-popUp { top: auto; bottom: 12px; }
+}
+
 #how-to-popUp-button{
   border: none;
   background: none;
@@ -738,6 +743,23 @@ h3{
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+
+
+@media (max-width: 880px) {
+  .how-to-popUp { top: auto; bottom: 12px; }
+  .down {
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  
+}
+
+.down.open {
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+}
+  
+}
+
 
 a {
   color: white;
