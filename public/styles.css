@@ -679,17 +679,14 @@ h3{
 
 .how-to-popUp{
   position: fixed;
+  padding: 8px 15px 10px 15px;
   top: 12px;
   right: 12px;
-  width: 300px;
+  width: 280px;
   border-radius: 10px;
   height: auto;
-  background: rgb(242, 183, 5,0.9);
+  background: rgb(242, 183, 5,0.8);
   color: rgb(0, 0, 0);
-}
-
-.how-to-popUp .controls__heading{
-  padding-top: 10px;
 }
 
 #how-to-popUp-button{
@@ -703,15 +700,21 @@ h3{
   justify-content: space-between;
   cursor: pointer;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
+
+}
+
+.how-to-title{
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: white;
 }
 
 .how-to-popUp-text{
-  padding-left: 10px;
-  padding-right: 10px;
   color: white;
   display: block;
+  padding-bottom: 5px;
 }
 
 .hide{
@@ -736,3 +739,6 @@ h3{
   -webkit-transform: rotate(45deg);
 }
 
+a {
+  color: white;
+}
