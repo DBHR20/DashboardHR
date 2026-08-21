@@ -764,3 +764,22 @@ h3{
 a {
   color: white;
 }
+
+.panel__heading .head-explanation{
+  width: 400px;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.head-explanation .info-icon{
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.head-explanation .info-icon:hover{
+  cursor: default;
+}
+
+.head-explanation a{
+  color: var(--yellow);
+}

@@ -803,7 +803,6 @@ function showTooltip(el, event, periodDate, indicatorPoints, pinned) {
           <span class="tooltip__label" style="color:${SERIES_COLORS[ind.key]}">${escapeHtml(ind.label)}</span>
           <span class="tooltip__value">${p.value}</span>
         </div>
-        <div class="tooltip__row"><span class="tooltip__label">Source rows</span><span class="tooltip__value">${p.source_rows}</span></div>
         ${sub}
       `;
     })
